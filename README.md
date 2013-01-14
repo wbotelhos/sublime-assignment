@@ -29,7 +29,7 @@ git clone https://github.com/wbotelhos/sublime-assignment Assignment
 ### Linux
 
 ```bash
-cd ~/.Sublime Text 2/Packages/
+cd ~/.config/sublime-text-2/Packages
 git clone https://github.com/wbotelhos/sublime-assignment Assignment
 ```
 
