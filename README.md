@@ -1,17 +1,20 @@
 # Sublime Assignment - An Assignment Plugin
 
+[![Build Status](https://img.shields.io/travis/wbotelhos/sublime-assignment/master.svg)](https://travis-ci.org/wbotelhos/sublime-assignment "Travis CI")
+[![Code Climate](https://codeclimate.com/github/wbotelhos/sublime-assignment.png)](https://codeclimate.com/github/wbotelhos/sublime-assignment "Code Climate")
+[![Support Sublime Assignment](http://img.shields.io/gittip/wbotelhos.svg)](https://www.gittip.com/wbotelhos "Git Tip")
+
 Sublime assignment is a plugin that changes your lines assignment to an inline style.
 
 ## Version
 
 ```
-@version        0.1.0
-@since          2012-01-12
-@author         Washington Botelho
-@twitter        twitter.com/wbotelhos
+@version  0.1.0
+@since    2012-01-12
+@author   Washington Botelho
+@doc      wbotelhos.com/sublime-assignment
 ```
-
-## Required Files
+## Dependencies
 
 + assignment.py
 + Default (YOUR_OS).sublime-keymap
@@ -36,13 +39,13 @@ git clone https://github.com/wbotelhos/sublime-assignment Assignment
 ### Windows
 
 ```bash
-cd %APPDATA%/Sublime Text 2/Packages/
+cd %APPDATA%/Sublime Text 2/Packages
 git clone https://github.com/wbotelhos/sublime-assignment Assignment
 ```
 
-Copy the content of keymap here and append it to your *User/Default (YOUR_OS).sublime-keymap*.
-
 ## Options
+
+Copy the content of keymap here and append it to your *User/Default (YOUR_OS).sublime-keymap*.
 
 ```json
 { "keys": ["ctrl+shift+@"], "command": "assignment" }
@@ -58,16 +61,17 @@ Copy the content of keymap here and append it to your *User/Default (YOUR_OS).su
 @user    = user
 ```
 
-2) Press your shortcut keys or follow the menu *Edit > Assignment.
+2) Press your shortcut keys or follow the menu *Tools > Assignment > Assign.
 
 3) Result:
 
 ```ruby
 @article, @comment, @user = article, comment, user
 ```
+
 # Features
 
-1) You don't need to select all line, just one character of a line you select it all:
+1) You don't need to select all lines, just one character of each line is enough:
 
 ```ruby
 @article = ar(ticle
@@ -75,7 +79,7 @@ Copy the content of keymap here and append it to your *User/Default (YOUR_OS).su
 @user    =) user
 ```
 
-Will select:
+Will becames:
 
 ```ruby
 (@article = article
@@ -88,9 +92,7 @@ Will select:
 ```ruby
 @article = article
 
-if @comment.nil?
-  puts 'Comment is nil!'
-end
+puts 'Not an assign!'
 
 @comment = comment
 ```
@@ -100,9 +102,7 @@ Result:
 ```ruby
 @article, @comment = article, comment
 
-if @comment.nil?
-  puts 'Comment is nil!'
-end
+puts 'Not an assign!'
 ```
 
 Take care, if you have a logical assignment like:
@@ -112,13 +112,13 @@ Take care, if you have a logical assignment like:
 @comment = Comment.new if @comment.nil?
 ```
 
-It will be result a bad assignment:
+It will be result in a bad assignment:
 
 ```ruby
 @article, @comment = article, Comment.new if @comment.nil?
 ```
 
-Then, avoid to select things that is not a variable assignment.
+So, avoid to select things that is not a variable assignment.
 
 3) If you have repeated assignment, it will generates a warning:
 
