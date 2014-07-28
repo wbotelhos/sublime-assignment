@@ -69,7 +69,7 @@ Copy the content of keymap here and append it to your *User/Default (YOUR_OS).su
 @article, @comment, @user = article, comment, user
 ```
 
-# Features
+## Features
 
 1) You don't need to select all lines, just one character of each line is enough:
 
