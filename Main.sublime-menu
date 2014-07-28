@@ -1,9 +1,18 @@
 [
   {
-    "id"      : "edit",
-    "children": [
-      { "id"      : "assignment" },
-      { "command" : "assignment" }
+    "id"       : "tools",
+    "children" : [
+      {
+        "id"       : "assignment",
+        "caption"  : "Assignment",
+        "children" : [
+          {
+            "id"      : "assign",
+            "caption" : "Assign",
+            "command" : "assignment"
+          }
+        ]
+      }
     ]
   }
 ]
